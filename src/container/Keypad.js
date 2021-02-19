@@ -30,7 +30,7 @@ const Keypad = ({ handler }) => {
           /
         </KeypadButtons>
       </div>
-      <div className='keypad--row'>
+      <div className='keypad__row'>
         <KeypadButtons identifier='number' clickHandler={handler}>
           9
         </KeypadButtons>
