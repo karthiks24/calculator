@@ -1,0 +1,57 @@
+@import "./App.scss";
+
+.display {
+  height: 25vh;
+  width: 100%;
+  background-color: map-get($color-variables, "display-bg");
+  color: map-get($color-variables, "button-bg");
+  font-size: 2rem;
+  text-align: right;
+  white-space: nowrap;
+  overflow: auto;
+  .result {
+    padding: 10px;
+    font-size: 3rem;
+  }
+  .input {
+    @include flexcentre(flex-end);
+    padding: 10px;
+  }
+}
+
+.keypad {
+  min-height: 50vh;
+  width: 100%;
+  &__row {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+  }
+}
+
+button {
+  @include flexcentre(center);
+  width: 25%;
+  height: 100%;
+  font-size: 2rem;
+  border: 0px;
+  background-color: #fff;
+  outline: none;
+  &.xl {
+    width: 50%;
+    background-color: map-get($color-variables, "display-bg");
+    &:hover {
+      background-color: map-get($color-variables, "button-bg");
+      box-shadow: 0px 0px 0 0.1rem rgba(0, 123, 255, 0.25);
+    }
+  }
+  &.compute {
+    color: map-get($color-variables, "display-bg");
+    &:hover {
+      color: map-get($color-variables, "button-bg");
+    }
+  }
+  &:hover {
+    background-color: map-get($color-variables, "display-bg");
+  }
+}

@@ -1,0 +1,36 @@
+@mixin flexcentre($position) {
+  display: flex;
+  justify-content: $position;
+  align-items: center;
+}
+
+$color-variables: (
+  display-bg: #d40640,
+  border: #ac2362,
+  button-bg: #fff,
+  page-bg: #ac2362,
+);
+
+.app {
+  @include flexcentre(center);
+  height: 100vh;
+  width: 100%;
+  background-color: map-get($color-variables, "page-bg");
+}
+
+.container {
+  height: 80vh;
+  width: 35%;
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    width: 80%;
+  }
+}
